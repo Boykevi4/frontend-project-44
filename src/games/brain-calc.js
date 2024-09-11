@@ -21,7 +21,7 @@ const getQuestionAndAnswer = () => {
   const operator = operators[operatorIndex];
   const firstNum = getRandomNum(0, 100);
   const secondNum = getRandomNum(0, 100);
-  const question = firstNum + operator + secondNum;
+  const question = `${firstNum} ${operator} ${secondNum}`;
   const correctAnswer = calculate(firstNum, secondNum, operator).toString();
 
   return [question, correctAnswer];
