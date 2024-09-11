@@ -5,6 +5,10 @@ const gameRule =
   'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrimeNumber = (num) => {
+  if (num === 1) {
+    return false;
+  }
+  
   if (num === 2 || num === 3) {
     return true;
   } else {
