@@ -1,4 +1,4 @@
-import { getRandomNum } from '../utils/get-random-number.js';
+import getRandomNum from '../utils/get-random-number.js';
 import runGame from '../utils/index.js';
 
 const isEven = (num) => num % 2 === 0;
@@ -15,4 +15,3 @@ const getQuestionAndAnswer = () => {
 const evenGame = () => runGame(gameRule, getQuestionAndAnswer);
 
 export default evenGame;
-

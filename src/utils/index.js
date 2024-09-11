@@ -8,7 +8,7 @@ const runGame = (gameRule, getQuestionAndAnswer) => {
   const userName = makeGreetings();
   console.log(gameRule);
 
-  for (let round = 0; round < numberOfRounds; round++) {
+  for (let round = 0; round < numberOfRounds; round += 1) {
     const [question, correctAnswer] = getQuestionAndAnswer();
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
@@ -16,7 +16,7 @@ const runGame = (gameRule, getQuestionAndAnswer) => {
       console.log('Correct!');
     } else {
       console.log(
-        `'${answer}' is a wrong answer ;(. Correct answer was '${correctAnswer}'`
+        `'${answer}' is a wrong answer ;(. Correct answer was '${correctAnswer}'`,
       );
       console.log(`Let's try again, ${userName}!`);
 
@@ -28,4 +28,3 @@ const runGame = (gameRule, getQuestionAndAnswer) => {
 };
 
 export default runGame;
-

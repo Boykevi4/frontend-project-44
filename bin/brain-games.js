@@ -2,4 +2,3 @@
 import makeGreetings from '../src/utils/cli.js';
 
 makeGreetings();
-

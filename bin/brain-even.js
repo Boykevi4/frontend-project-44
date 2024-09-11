@@ -2,4 +2,3 @@
 import evenGame from '../src/games/brain-even.js';
 
 evenGame();
-
