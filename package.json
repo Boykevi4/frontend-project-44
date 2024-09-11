@@ -1,5 +1,6 @@
 {
   "name": "@hexlet/code",
+  "root": "true",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/Boykevi4/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Boykevi4/frontend-project-44/actions)",
   "main": "index.js",
@@ -21,8 +22,11 @@
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
+    "@eslint/js": "^9.10.0",
     "@types/node": "^22.5.2",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "globals": "^15.9.0",
     "typescript": "^5.5.4"
   }
 }
-
