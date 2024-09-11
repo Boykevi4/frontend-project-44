@@ -18,7 +18,7 @@ const runGame = (gameRule, getQuestionAndAnswer) => {
       console.log(
         `'${answer}' is a wrong answer ;(. Correct answer was '${correctAnswer}'`
       );
-      console.log(`Let's try again ${userName}`);
+      console.log(`Let's try again, ${userName}!`);
 
       return;
     }
