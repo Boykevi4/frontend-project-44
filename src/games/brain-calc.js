@@ -22,7 +22,7 @@ const getQuestionAndAnswer = () => {
   const minThresholdValue = 0;
   const maxThresholdValue = 100;
 
-  const operator = operators[getRandomNum(minThresholdValue, operators.length)];
+  const operator = operators[getRandomNum(minThresholdValue, operators.length - 1)];
   const firstNum = getRandomNum(minThresholdValue, maxThresholdValue);
   const secondNum = getRandomNum(minThresholdValue, maxThresholdValue);
   const question = `${firstNum} ${operator} ${secondNum}`;
