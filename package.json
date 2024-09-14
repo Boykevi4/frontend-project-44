@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "root": "true",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/Boykevi4/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Boykevi4/frontend-project-44/actions)",
+  "description": "Repository test for user's logical thinking",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -28,7 +28,6 @@
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.30.0",
-    "globals": "^15.9.0",
-    "typescript": "^5.5.4"
+    "globals": "^15.9.0"
   }
 }

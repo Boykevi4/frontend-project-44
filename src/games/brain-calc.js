@@ -1,31 +1,36 @@
 import getRandomNum from '../utils/get-random-number.js';
-import runGame from '../utils/index.js';
+import runGame from '../index.js';
 
 const gameRule = 'What is the result of the expression?';
 
 const operators = ['-', '+', '*'];
 
-const operatorIndex = getRandomNum(0, 2);
-
-const calculate = (firstNum, secondNum, operator) => {
-  if (operator === '-') {
-    return firstNum - secondNum;
-  } if (operator === '+') {
-    return firstNum + secondNum;
+const produceCalculate = (firstNum, secondNum, operator) => {
+  switch (operator) {
+    case '+':
+      return firstNum + secondNum;
+    case '-':
+      return firstNum - secondNum;
+    case '*':
+      return firstNum * secondNum;
+    default:
+      throw new Error('Unsupported operation');
   }
-  return firstNum * secondNum;
 };
 
 const getQuestionAndAnswer = () => {
-  const operator = operators[operatorIndex];
-  const firstNum = getRandomNum(0, 100);
-  const secondNum = getRandomNum(0, 100);
+  const minThresholdValue = 0;
+  const maxThresholdValue = 100;
+
+  const operator = operators[getRandomNum(minThresholdValue, operators.length)];
+  const firstNum = getRandomNum(minThresholdValue, maxThresholdValue);
+  const secondNum = getRandomNum(minThresholdValue, maxThresholdValue);
   const question = `${firstNum} ${operator} ${secondNum}`;
-  const correctAnswer = calculate(firstNum, secondNum, operator).toString();
+  const correctAnswer = produceCalculate(firstNum, secondNum, operator).toString();
 
   return [question, correctAnswer];
 };
 
-const calcGame = () => runGame(gameRule, getQuestionAndAnswer);
+const runCalcGame = () => runGame(gameRule, getQuestionAndAnswer);
 
-export default calcGame;
+export default runCalcGame;

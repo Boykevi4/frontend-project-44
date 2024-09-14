@@ -1,5 +1,5 @@
 import getRandomNum from '../utils/get-random-number.js';
-import runGame from '../utils/index.js';
+import runGame from '../index.js';
 
 const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -15,12 +15,15 @@ const isPrimeNumber = (num) => {
 };
 
 const getQuestionAndAnswer = () => {
-  const numForQuestion = getRandomNum(0, 10);
+  const minThresholdValue = 0;
+  const maxThresholdValue = 10;
+
+  const numForQuestion = getRandomNum(minThresholdValue, maxThresholdValue);
   const correctAnswer = isPrimeNumber(numForQuestion) ? 'yes' : 'no';
 
   return [numForQuestion, correctAnswer];
 };
 
-const primeGame = () => runGame(gameRule, getQuestionAndAnswer);
+const runPrimeGame = () => runGame(gameRule, getQuestionAndAnswer);
 
-export default primeGame;
+export default runPrimeGame;

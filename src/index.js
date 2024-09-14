@@ -1,11 +1,11 @@
 import readlineSync from 'readline-sync';
 
-import makeGreetings from './cli.js';
-
 const numberOfRounds = 3;
 
 const runGame = (gameRule, getQuestionAndAnswer) => {
-  const userName = makeGreetings();
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name?');
+  console.log(`Hello, ${name}!`);
   console.log(gameRule);
 
   for (let round = 0; round < numberOfRounds; round += 1) {
@@ -18,13 +18,13 @@ const runGame = (gameRule, getQuestionAndAnswer) => {
       console.log(
         `'${answer}' is a wrong answer ;(. Correct answer was '${correctAnswer}'`,
       );
-      console.log(`Let's try again, ${userName}!`);
+      console.log(`Let's try again, ${name}!`);
 
       return;
     }
   }
 
-  console.log(`Congratulations, ${userName}!`);
+  console.log(`Congratulations, ${name}!`);
 };
 
 export default runGame;
